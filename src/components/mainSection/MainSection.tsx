@@ -14,6 +14,7 @@ import { API_KEY } from '../../settings/APIKEY'
 import Search from '../search/Search'
 import GetWeather from '../getWeather/GetWeather'
 import StartApp from '../startApp/StartApp'
+import DaysScroll from '../daysScroll/DaysScroll'
 
 function MainSection() {
   const state = useSelector((state: StoreState) => state)
@@ -51,7 +52,9 @@ function MainSection() {
               </div>
 
               <div className="mainSection_bottom">
-                <div className="mainSection_bottom_scrollDays"></div>
+                <div className="mainSection_bottom_scrollDays">
+                  <DaysScroll/>
+                </div>
 
                 <div className="mainSection_bottom_temperature">
                   {Math.round(weather.data[0].main.temp)}

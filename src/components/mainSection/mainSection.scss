@@ -4,9 +4,12 @@ $description_offset: 0vw;
 
 $description_font_size: 15vw;
 
-$chooseButton_font_size: 23px;
+$chooseButton_font_size: 2vw;
+$padding_vertical_of_button: 1vw;
+$padding_horizontal_of_button: 3vw;
 
 .mainSection {
+  height: 100vh;
   max-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -30,6 +33,7 @@ $chooseButton_font_size: 23px;
         margin-top: $description_offset;
         font-size: $description_font_size;
         line-height: 0.75;
+        font-weight: 700;
       }
 
       .mainSection_top_chooseButton {
@@ -38,12 +42,13 @@ $chooseButton_font_size: 23px;
         align-items: center;
         text-align: center;
         width: fit-content;
-        max-width: 20%;
-        padding: 20px 50px;
+        max-width: 25%;
+        padding: $padding_vertical_of_button $padding_horizontal_of_button;
         height: fit-content;
-        border: 0.15vw solid $b_0;
+        border: 0.3vw solid $b_0;
         border-radius: 20vw;
         font-size: $chooseButton_font_size;
+        font-weight: 600;
         cursor: pointer;
       }
     }
@@ -52,8 +57,15 @@ $chooseButton_font_size: 23px;
         display: flex;
         justify-content: space-between;
 
+        .mainSection_bottom_scrollDays{
+          width: 100%;
+          height: 100%;
+          // background-color: tomato;
+        }
+
         .mainSection_bottom_temperature{
             font-size: $description_font_size;
+            font-weight: 700;
             // background-color: yellowgreen;
         }
     }

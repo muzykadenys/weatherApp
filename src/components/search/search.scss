@@ -1,5 +1,7 @@
 @import '../../settings/settings.scss';
 
+$input_margit_top: 15vw;
+
 $input_font_size: 10vw;
 $input_padding_horizontal: 40px;
 
@@ -9,7 +11,7 @@ $close_button_margin: 1.6vw;
 .SearchSection {
   display: flex;
   justify-content: center;
-  align-items: center;
+  // align-items: center;
   position: fixed;
   height: 100vh;
   width: 100vw;
@@ -32,6 +34,8 @@ $close_button_margin: 1.6vw;
     .SearchSection_wrapper_inputBlock_Holder {
       display: flex;
       justify-content: flex-end;
+      margin-top: $input_margit_top;
+      
       .SearchSection_wrapper_inputBlock {
         width: calc(
           100vw - $global_horizontal_paddings * 2 - $input_padding_horizontal *
