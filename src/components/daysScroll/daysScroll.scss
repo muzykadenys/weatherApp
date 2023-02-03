@@ -1,0 +1,48 @@
+@import '../../settings/settings.scss';
+
+$height_of_el: 8vw;
+$width_of_el: 60px;
+
+$padding_vertical_of_el: 3vw;
+$padding_horizontal_of_el: 2vw;
+
+$el_top_font_size: 3.2vw;
+$el_bot_font_size: 1.5vw;
+
+.DaysScrollSection {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  // background-color: tomato;
+
+  .DaysScrollSection_wraper {
+    width: fit-content;
+    display: flex;
+    // background-color: pink;
+
+    .DaysScrollSection_wraper_el {
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+      height: $height_of_el;
+      // width: $width_of_el;
+      margin-right: 2vw;
+      padding: $padding_vertical_of_el $padding_horizontal_of_el;
+      // background-color: greenyellow;
+      border: 0.3vw solid $b_0;
+      border-radius: 100vw;
+
+      .DaysScrollSection_wraper_el_top {
+        font-size: $el_top_font_size;
+      }
+
+      .DaysScrollSection_wraper_el_bot {
+        font-weight: 600;
+        font-size: $el_bot_font_size;
+      }
+    }
+  }
+}

@@ -1,5 +1,6 @@
->StartApp:
-- create useLocaleStorage hook;
-- initialization when user open site;
->styles:
-- add color when text is selected;
+>Search:
+- add saving of last search;
+- change styles;
+>DayScroll:
+- add base layout;
+- add rendering;

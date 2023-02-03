@@ -68,7 +68,7 @@ function GetWeather() {
         .then((res) => res.json())
         .then((res) => {
           updateWeather([...res.list])
-          console.log(res)
+          // console.log(res)
         })
     }
   }, [location])

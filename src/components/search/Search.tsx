@@ -1,8 +1,9 @@
 import React, { Dispatch, SetStateAction, useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
+import { useLocalStorage } from '../../hook/useLocalStorage'
 import { FETCH_LOCATION_SUCCESS } from '../../redux/reducersConst'
 import { API_KEY } from '../../settings/APIKEY'
-import { locationType } from '../../types'
+import { locationType, LSLocation } from '../../types'
 import '../search/search.scss'
 
 type SearchPropTypes = {
@@ -28,6 +29,11 @@ function Search(props: SearchPropTypes) {
     dispatch({ type: FETCH_LOCATION_SUCCESS, payload: data })
   }
 
+  const [LSS_location, setLSS_location] = useLocalStorage(LSLocation, {
+    name: '',
+    lat: 0,
+    lon: 0,
+  })
   // ============================================
 
   const [locInput, setLocInput] = useState<string>('')
@@ -52,6 +58,7 @@ function Search(props: SearchPropTypes) {
       lon: el.lon,
     }
     updateLocation(def)
+    setLSS_location(def)
     props.setOpenSearch((el) => !el)
   }
 

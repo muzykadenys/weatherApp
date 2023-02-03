@@ -1,3 +1,4 @@
+import { forecastType } from "../../types"
 import { FETCH_LOCATION_ERROR, FETCH_LOCATION_SUCCESS, FETCH_WEATHER_ERROR, FETCH_WEATHER_SUCCESS } from "../reducersConst"
 
 
@@ -8,7 +9,7 @@ type ActionType = {
 }
 type StateType = {
     loading: boolean
-    data: Object
+    data: Array<any>
     error: string
 }
 
