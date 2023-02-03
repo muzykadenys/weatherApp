@@ -1,0 +1,5 @@
+>StartApp:
+- create useLocaleStorage hook;
+- initialization when user open site;
+>styles:
+- add color when text is selected;

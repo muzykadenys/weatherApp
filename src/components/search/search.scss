@@ -1,0 +1,115 @@
+@import '../../settings/settings.scss';
+
+$input_font_size: 10vw;
+$input_padding_horizontal: 40px;
+
+$close_button_size: 1.8vw;
+$close_button_margin: 1.6vw;
+
+.SearchSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    background-color: $b_0_1;
+    opacity: 0.5;
+  }
+
+  .SearchSection_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .SearchSection_wrapper_inputBlock_Holder {
+      display: flex;
+      justify-content: flex-end;
+      .SearchSection_wrapper_inputBlock {
+        width: calc(
+          100vw - $global_horizontal_paddings * 2 - $input_padding_horizontal *
+            2
+        );
+        height: 17vw;
+        border: none;
+        border-radius: 15px;
+        font-size: $input_font_size;
+        padding: 0px $input_padding_horizontal;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .SearchSection_wrapper_closeInput {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: $close_button_size;
+        height: $close_button_size;
+        margin-right: $close_button_margin;
+        margin-top: $close_button_margin;
+        padding: 10px;
+        border-radius: 100vw;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $b_1;
+        }
+
+        &:before {
+          position: absolute;
+          content: '';
+          background-color: $b_0;
+          height: 0.18vw;
+          width: $close_button_size;
+          transform: rotateZ(45deg);
+        }
+        &:after {
+          position: absolute;
+          content: '';
+          background-color: $b_0;
+          height: 0.18vw;
+          width: $close_button_size;
+          transform: rotateZ(-45deg);
+        }
+      }
+    }
+
+    .SearchSection_wrapper_suggestionBlock {
+      margin-top: 20px;
+      display: grid;
+      justify-content: center;
+      align-content: center;
+
+      gap: 10px;
+      grid-auto-flow: column;
+
+      .SearchSection_wrapper_suggestionBlock_el {
+        background-color: $b_-1;
+        // width: 10vw;
+        border-radius: 6px;
+        padding: 15px 20px;
+        cursor: pointer;
+        font-size: 20px;
+
+        .SearchSection_wrapper_suggestionBlock_el_name{
+            font-weight: 800;
+        }
+
+        .SearchSection_wrapper_suggestionBlock_el_state{
+            color: $b_0_1;
+            font-size: 16px;
+        }
+      }
+    }
+  }
+}
