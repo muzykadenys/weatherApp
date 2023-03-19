@@ -1,0 +1,32 @@
+@font-face {
+  font-family: Rock;
+  src: url("../../public/fonts/ROCK.TTF");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: Rock;
+  src: url("../../public/fonts/rockb.ttf");
+  font-style: normal;
+  font-weight: 600;
+}
+#root,
+body,
+html {
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+}
+#root ::-moz-selection, body ::-moz-selection, html ::-moz-selection {
+  color: rgba(34, 34, 34, 0.2);
+  background: rgba(189, 189, 189, 0.39);
+}
+#root ::selection,
+body ::selection,
+html ::selection {
+  color: rgba(34, 34, 34, 0.2);
+  background: rgba(189, 189, 189, 0.39);
+}
+
+.mainSection {
+  height: 100vh;
+}/*# sourceMappingURL=main.css.map */

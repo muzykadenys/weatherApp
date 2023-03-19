@@ -1,0 +1,41 @@
+@font-face {
+  font-family: Rock;
+  src: url('../../public/fonts/ROCK.TTF');
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: Rock;
+  src: url('../../public/fonts/rockb.ttf');
+  font-style: normal;
+  font-weight: 600;
+}
+
+// =======================
+
+$global_horizontal_paddings: 4vw;
+$global_vertical_paddings: 5vh;
+
+$b_-1: white;
+
+$b_0: black;
+$b_0_0: #22222233;
+$b_0_1: rgb(170, 170, 170);
+$b_0_2: rgba(189, 189, 189, 0.39);
+
+$b_1: rgb(235, 235, 234);
+
+// =======================
+
+#root,
+body,
+html {
+  // font-family: Rock;
+  font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
+
+  ::selection {
+    color: $b_0_0;
+    background: $b_0_2;
+  }
+}

@@ -1,0 +1,2 @@
+>daysScroll:
+ - add selection weather of other days;

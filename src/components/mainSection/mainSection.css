@@ -1,0 +1,94 @@
+@font-face {
+  font-family: Rock;
+  src: url("../../public/fonts/ROCK.TTF");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: Rock;
+  src: url("../../public/fonts/rockb.ttf");
+  font-style: normal;
+  font-weight: 600;
+}
+#root,
+body,
+html {
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+}
+#root ::-moz-selection, body ::-moz-selection, html ::-moz-selection {
+  color: rgba(34, 34, 34, 0.2);
+  background: rgba(189, 189, 189, 0.39);
+}
+#root ::selection,
+body ::selection,
+html ::selection {
+  color: rgba(34, 34, 34, 0.2);
+  background: rgba(189, 189, 189, 0.39);
+}
+
+.mainSection {
+  height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(235, 235, 234);
+}
+.mainSection .mainSection_wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5vh 4vw;
+}
+.mainSection .mainSection_wrapper .mainSection_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.mainSection .mainSection_wrapper .mainSection_top .mainSection_top_description {
+  margin-top: 0vw;
+  font-size: 15vw;
+  line-height: 0.75;
+  font-weight: 700;
+}
+.mainSection .mainSection_wrapper .mainSection_top .mainSection_top_chooseButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 25%;
+  padding: 1vw 3vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  border: 0.3vw solid black;
+  border-radius: 20vw;
+  font-size: 1.5vw;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+.mainSection .mainSection_wrapper .mainSection_top .mainSection_top_chooseButton:hover {
+  color: black;
+  background-color: white;
+}
+.mainSection .mainSection_wrapper .mainSection_bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.mainSection .mainSection_wrapper .mainSection_bottom .mainSection_bottom_scrollDays {
+  width: 100%;
+  height: 100%;
+}
+.mainSection .mainSection_wrapper .mainSection_bottom .mainSection_bottom_temperature {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  font-size: 15vw;
+  font-weight: 700;
+}/*# sourceMappingURL=mainSection.css.map */
