@@ -20,6 +20,7 @@ function MainSection() {
   const state = useSelector((state: StoreState) => state)
   const location: any = state.location
   const weather: any = state.weather
+  const current: any = state.current
 
   //=========================================
 
@@ -40,7 +41,8 @@ function MainSection() {
             <div className="mainSection_wrapper">
               <div className="mainSection_top">
                 <div className="mainSection_top_description">
-                  {weather.data[0].weather[0].description}.
+                  {/* {weather.data[0].weather[0].description}. */}
+                  {current.data.weather[0].description}.
                 </div>
 
                 <div
@@ -58,7 +60,7 @@ function MainSection() {
 
                 <div className="mainSection_bottom_temperature">
                   <div className="mainSection_bottom_temperature_wrap">
-                    {Math.round(weather.data[0].main.temp)}
+                    {Math.round(current.data.main.temp)}
                     <sup className="mainSection_bottom_temperature_sup">o</sup>
                   </div>
                 </div>
@@ -67,7 +69,7 @@ function MainSection() {
           </div>
         </>
       ) : (
-        <>"🍩"</>
+        <>🍩</>
       )}
     </>
   )

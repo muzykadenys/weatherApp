@@ -1,2 +1,2 @@
->Search:
-- add autofocus on input;
+>daysScroll:
+ - add selection weather of other days;

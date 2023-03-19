@@ -53,7 +53,7 @@ function Search(props: SearchPropTypes) {
     setLocInput(def)
     if (def === '') setListOfLocations([])
 
-    console.log(e.target.value)
+    // console.log(e.target.value)
   }
 
   // function calls when click on suggested option
@@ -84,6 +84,12 @@ function Search(props: SearchPropTypes) {
     }
   }, [locInput])
 
+  const closeBackground = (e: React.FormEvent<EventTarget>) => {
+    if (e.target == e.currentTarget) {
+      props.setOpenSearch((el) => !el)
+    }
+  }
+
   useEffect(() => {
     if (inputFocus.current && props.openSearch) {
       inputFocus.current.focus()
@@ -94,7 +100,7 @@ function Search(props: SearchPropTypes) {
     <>
       {props.openSearch ? (
         <div className="SearchSection">
-          <div className="SearchSection_wrapper">
+          <div className="SearchSection_wrapper" onClick={closeBackground}>
             <div className="SearchSection_wrapper_inputBlock_Holder">
               <input
                 ref={inputFocus}

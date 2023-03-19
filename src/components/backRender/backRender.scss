@@ -1,0 +1,32 @@
+@import '../../settings/settings.scss';
+
+.BackRenderSection {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  position: fixed;
+  z-index: -100;
+//   background-color: $b_1;
+
+  .BackRenderSection_glass {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    // // background-color: pink;
+    backdrop-filter: blur(80px);
+    -webkit-backdrop-filter: blur(50px);
+  }
+
+  .BackRenderSection_element{
+    // font-size: 500px;
+    width: 35vw;
+    height: 100vh;
+    // border-radius: 1000px;
+    border-top-left-radius: 1000px;
+    border-bottom-left-radius: 1000px;
+    background-color: #ffda44;
+    background: linear-gradient(140deg, rgb(255, 227, 135) 50%, rgb(112, 179, 255) 80%);
+  }
+}

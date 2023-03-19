@@ -34,10 +34,16 @@ export const weatherNames = {
     'snow',
     'mist haze dust fo sand dust ',
     'smoke ash',
-    'tornado'
+    'tornado',
   ],
 
   emoji: ['☀️', '🌤️', '🌥️', '☁️', '🌧️', '🌦️', '🌩️', '🌨️', '🌫️', '💨', '🌪️'],
+
+  colors: [
+    '#ffda44',
+    '#ffe88a',
+    ''
+  ],
 }
 
 export const LSLocation = 'LSLocation'

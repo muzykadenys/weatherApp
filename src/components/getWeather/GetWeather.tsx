@@ -4,6 +4,8 @@ import '../mainSection/mainSection.scss'
 import { forecastType, locationType } from '../../types'
 import { StoreState } from '../../redux/store'
 import {
+  CURRENT_ERROR,
+  CURRENT_SUCCESS,
   FETCH_LOCATION_ERROR,
   FETCH_LOCATION_SUCCESS,
   FETCH_WEATHER_ERROR,
@@ -27,6 +29,13 @@ function GetWeather() {
   }
   const errorWeather = (value: string) => {
     dispatch({ type: FETCH_WEATHER_ERROR, error: value })
+  }
+
+  const updateCurrent = (value: forecastType) => {
+    dispatch({ type: CURRENT_SUCCESS, payload: value })
+  }
+  const errorCurrent = (value: string) => {
+    dispatch({ type: CURRENT_ERROR, error: value })
   }
 
   const state = useSelector((state: StoreState) => state)
@@ -68,14 +77,18 @@ function GetWeather() {
         .then((res) => res.json())
         .then((res) => {
           updateWeather([...res.list])
-          // console.log(res)
+          updateCurrent(res.list[0])
+          // console.log(res.list)
+        })
+        .catch((e) => {
+          errorWeather(e)
+          errorCurrent(e)
         })
     }
   }, [location])
   /////////////////////////////////////////////// FETCHING
 
   return <></>
-
 }
 
 export default GetWeather

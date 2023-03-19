@@ -14,7 +14,7 @@ $padding_horizontal_of_button: 3vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: $b_1;
+  // background-color: $b_1;
 
   .mainSection_wrapper {
     height: 100%;
@@ -57,7 +57,7 @@ $padding_horizontal_of_button: 3vw;
 
         &:hover{
           color: $b_0;
-          background-color: $b_-1;
+          background-color: transparent;
         }
       }
     }

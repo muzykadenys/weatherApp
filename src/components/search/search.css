@@ -1,0 +1,127 @@
+@font-face {
+  font-family: Rock;
+  src: url("../../public/fonts/ROCK.TTF");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: Rock;
+  src: url("../../public/fonts/rockb.ttf");
+  font-style: normal;
+  font-weight: 600;
+}
+#root,
+body,
+html {
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+}
+#root ::-moz-selection, body ::-moz-selection, html ::-moz-selection {
+  color: rgba(34, 34, 34, 0.2);
+  background: rgba(189, 189, 189, 0.39);
+}
+#root ::selection,
+body ::selection,
+html ::selection {
+  color: rgba(34, 34, 34, 0.2);
+  background: rgba(189, 189, 189, 0.39);
+}
+
+.SearchSection {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+}
+.SearchSection::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(170, 170, 170);
+  opacity: 0.5;
+}
+.SearchSection .SearchSection_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.SearchSection .SearchSection_wrapper .SearchSection_wrapper_inputBlock_Holder {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15vw;
+}
+.SearchSection .SearchSection_wrapper .SearchSection_wrapper_inputBlock_Holder .SearchSection_wrapper_inputBlock {
+  width: calc(92vw - 80px);
+  height: 17vw;
+  border: none;
+  border-radius: 15px;
+  font-size: 10vw;
+  padding: 0px 40px;
+}
+.SearchSection .SearchSection_wrapper .SearchSection_wrapper_inputBlock_Holder .SearchSection_wrapper_inputBlock::-moz-placeholder {
+  color: rgb(170, 170, 170);
+}
+.SearchSection .SearchSection_wrapper .SearchSection_wrapper_inputBlock_Holder .SearchSection_wrapper_inputBlock::placeholder {
+  color: rgb(170, 170, 170);
+}
+.SearchSection .SearchSection_wrapper .SearchSection_wrapper_inputBlock_Holder .SearchSection_wrapper_inputBlock:focus {
+  outline: none;
+}
+.SearchSection .SearchSection_wrapper .SearchSection_wrapper_inputBlock_Holder .SearchSection_wrapper_closeInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 1.8vw;
+  height: 1.8vw;
+  margin-right: 1.6vw;
+  margin-top: 1.6vw;
+  padding: 10px;
+  border-radius: 100vw;
+  cursor: pointer;
+}
+.SearchSection .SearchSection_wrapper .SearchSection_wrapper_inputBlock_Holder .SearchSection_wrapper_closeInput:hover {
+  background-color: rgb(235, 235, 234);
+}
+.SearchSection .SearchSection_wrapper .SearchSection_wrapper_inputBlock_Holder .SearchSection_wrapper_closeInput:before {
+  position: absolute;
+  content: "";
+  background-color: black;
+  height: 0.18vw;
+  width: 1.8vw;
+  transform: rotateZ(45deg);
+}
+.SearchSection .SearchSection_wrapper .SearchSection_wrapper_inputBlock_Holder .SearchSection_wrapper_closeInput:after {
+  position: absolute;
+  content: "";
+  background-color: black;
+  height: 0.18vw;
+  width: 1.8vw;
+  transform: rotateZ(-45deg);
+}
+.SearchSection .SearchSection_wrapper .SearchSection_wrapper_suggestionBlock {
+  margin-top: 20px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  gap: 10px;
+  grid-auto-flow: column;
+}
+.SearchSection .SearchSection_wrapper .SearchSection_wrapper_suggestionBlock .SearchSection_wrapper_suggestionBlock_el {
+  background-color: white;
+  border-radius: 6px;
+  padding: 15px 20px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.SearchSection .SearchSection_wrapper .SearchSection_wrapper_suggestionBlock .SearchSection_wrapper_suggestionBlock_el .SearchSection_wrapper_suggestionBlock_el_name {
+  font-weight: 800;
+}
+.SearchSection .SearchSection_wrapper .SearchSection_wrapper_suggestionBlock .SearchSection_wrapper_suggestionBlock_el .SearchSection_wrapper_suggestionBlock_el_state {
+  color: rgb(170, 170, 170);
+  font-size: 16px;
+  font-weight: 600;
+}/*# sourceMappingURL=search.css.map */

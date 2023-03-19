@@ -1,10 +1,6 @@
+import { CURRENT_ERROR, CURRENT_SUCCESS } from '../reducersConst'
+
 import { forecastType } from '../../types'
-import {
-  FETCH_LOCATION_ERROR,
-  FETCH_LOCATION_SUCCESS,
-  FETCH_WEATHER_ERROR,
-  FETCH_WEATHER_SUCCESS,
-} from '../reducersConst'
 
 type ActionType = {
   payload: string
@@ -13,7 +9,7 @@ type ActionType = {
 }
 type StateType = {
   loading: boolean
-  data: Array<any>
+  data: Array<forecastType>
   error: string
 }
 
@@ -25,23 +21,22 @@ const initialState = {
   error: '',
 }
 
-const fetchWeatherReducer = (
+const currentReducer = (
   state: StateType = initialState,
   action: ActionType,
 ) => {
   switch (action.type) {
-    case FETCH_WEATHER_SUCCESS:
+    case CURRENT_SUCCESS:
       return {
         ...state,
         loading: false,
         data: action.payload,
         error: '',
       }
-    case FETCH_WEATHER_ERROR:
+    case CURRENT_ERROR:
       return {
         ...state,
         loading: true,
-        data: [],
         error: action.error,
       }
     default:
@@ -49,4 +44,4 @@ const fetchWeatherReducer = (
   }
 }
 
-export default fetchWeatherReducer
+export default currentReducer
