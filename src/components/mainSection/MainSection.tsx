@@ -41,7 +41,6 @@ function MainSection() {
             <div className="mainSection_wrapper">
               <div className="mainSection_top">
                 <div className="mainSection_top_description">
-                  {/* {weather.data[0].weather[0].description}. */}
                   {current.data.weather[0].description}.
                 </div>
 
