@@ -40,9 +40,16 @@ export const weatherNames = {
   emoji: ['☀️', '🌤️', '🌥️', '☁️', '🌧️', '🌦️', '🌩️', '🌨️', '🌫️', '💨', '🌪️'],
 
   colors: [
-    '#ffda44',
-    '#ffe88a',
-    ''
+    ['#ffda44', '#ffda44'],
+    ['#ffdb4d', '#ffe88a'],
+    ['#ffe57e', '#dddddd'],
+    ['#cecece', '#dddddd'],
+    ['#cecece', '#b7fff3'],
+    ['#adb2b7', '#fffd72'],
+    ['#adb6be', '#91a0da'],
+    ['#ccd3da', '#cbcfdb'],
+    ['#f1f8ff', '#cbcfdb'],
+    ['#888888', '#4f4f4f'],
   ],
 }
 
