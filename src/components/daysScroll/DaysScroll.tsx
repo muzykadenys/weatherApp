@@ -50,8 +50,9 @@ function DaysScroll() {
           if (JSON.stringify(el) === JSON.stringify(current.data))
             setActiveWord = activeWord
 
-          // console.log(date.getHours(), date.getDate(), date.getDay())
-          if (index === 0 || date.getHours() === 11) {
+          
+          if (index === 0 || date.getHours() === 12) {
+            // console.log(date.getHours(), date.getDate(), date.getDay())
             return (
               <div
                 onClick={() => {

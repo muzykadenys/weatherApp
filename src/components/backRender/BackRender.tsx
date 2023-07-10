@@ -24,7 +24,7 @@ function BackRender() {
   }
 
   useEffect(() => {
-    console.log(current.data)
+    // console.log(current.data)
     if (current.data.length !== 0) {
       getIndexOfColor(current.data.weather[0].main)
     }
